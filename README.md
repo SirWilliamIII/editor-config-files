@@ -1,3 +1,3 @@
 # editor-config-files
 
-### Because losing your settings is painful
+### Because reconfiguring is sad...
