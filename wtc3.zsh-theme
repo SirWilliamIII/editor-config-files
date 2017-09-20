@@ -91,7 +91,7 @@ fi
 
 # AWS
 if [ ! -n "${BULLETTRAIN_AWS_BG+1}" ]; then
-  BULLETTRAIN_AWS_BG=yellow
+  BULLETTRAIN_AWS_BG=red
 fi
 if [ ! -n "${BULLETTRAIN_AWS_FG+1}" ]; then
   BULLETTRAIN_AWS_FG=black
@@ -122,7 +122,7 @@ if [ ! -n "${BULLETTRAIN_GIT_COLORIZE_DIRTY_FG_COLOR+1}" ]; then
   BULLETTRAIN_GIT_COLORIZE_DIRTY_FG_COLOR=black
 fi
 if [ ! -n "${BULLETTRAIN_GIT_COLORIZE_DIRTY_BG_COLOR+1}" ]; then
-  BULLETTRAIN_GIT_COLORIZE_DIRTY_BG_COLOR=yellow
+  BULLETTRAIN_GIT_COLORIZE_DIRTY_BG_COLOR=green
 fi
 if [ ! -n "${BULLETTRAIN_GIT_BG+1}" ]; then
   BULLETTRAIN_GIT_BG=white
@@ -135,17 +135,6 @@ if [ ! -n "${BULLETTRAIN_GIT_EXTENDED+1}" ]; then
 fi
 if [ ! -n "${BULLETTRAIN_GIT_PROMPT_CMD+1}" ]; then
   BULLETTRAIN_GIT_PROMPT_CMD="\$(git_prompt_info)"
-fi
-
-# PERL
-if [ ! -n "${BULLETTRAIN_PERL_BG+1}" ]; then
-  BULLETTRAIN_PERL_BG=yellow
-fi
-if [ ! -n "${BULLETTRAIN_PERL_FG+1}" ]; then
-  BULLETTRAIN_PERL_FG=black
-fi
-if [ ! -n "${BULLETTRAIN_PERL_PREFIX+1}" ]; then
-  BULLETTRAIN_PERL_PREFIX=🐪
 fi
 
 # CONTEXT
@@ -231,7 +220,7 @@ if [ ! -n "${BULLETTRAIN_EXEC_TIME_ELAPSED+1}" ]; then
   BULLETTRAIN_EXEC_TIME_ELAPSED=5
 fi
 if [ ! -n "${BULLETTRAIN_EXEC_TIME_BG+1}" ]; then
-  BULLETTRAIN_EXEC_TIME_BG=yellow
+  BULLETTRAIN_EXEC_TIME_BG=black
 fi
 if [ ! -n "${BULLETTRAIN_EXEC_TIME_FG+1}" ]; then
   BULLETTRAIN_EXEC_TIME_FG=black
@@ -375,7 +364,7 @@ prompt_hg() {
         st='±'
       elif [[ -n $(hg prompt "{status|modified}") ]]; then
         # if any modification
-        prompt_segment yellow black
+        prompt_segment blue black
         st='±'
       else
         # if working copy is clean
